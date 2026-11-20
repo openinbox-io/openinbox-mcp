@@ -1,0 +1,58 @@
+{
+  "name": "openinbox-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for OpenInbox: give AI agents (Claude, ChatGPT, Cursor) a disposable email inbox to receive verification codes and links.",
+  "mcpName": "io.github.openinbox-io/openinbox-mcp",
+  "license": "MIT",
+  "type": "module",
+  "homepage": "https://openinbox.io/ai-agents",
+  "author": {
+    "name": "OpenInbox",
+    "email": "support@openinbox.io",
+    "url": "https://openinbox.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openinbox-io/openinbox-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/openinbox-io/openinbox-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "ai-agent",
+    "claude",
+    "cursor",
+    "temp-email",
+    "disposable-email",
+    "email-verification",
+    "otp",
+    "openinbox"
+  ],
+  "bin": {
+    "openinbox-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/*.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json && chmod +x dist/index.js",
+    "test": "rm -rf dist-test && tsc -p tsconfig.test.json && node --test dist-test/test/",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "typescript": "^5.9.3"
+  }
+}
