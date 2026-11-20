@@ -3,6 +3,8 @@
 [![npm](https://img.shields.io/npm/v/openinbox-mcp)](https://www.npmjs.com/package/openinbox-mcp)
 [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
+[![OpenInbox – Email for AI Agents MCP server – quality and maintenance score on Glama](https://glama.ai/mcp/servers/openinbox-io/openinbox-mcp/badges/card.svg)](https://glama.ai/mcp/servers/openinbox-io/openinbox-mcp)
+
 **Give your AI agent its own email inbox.** This [Model Context Protocol](https://modelcontextprotocol.io) server lets Claude, ChatGPT, Cursor and other MCP clients create real, disposable email addresses with [OpenInbox](https://openinbox.io), wait for incoming mail, and pull out verification codes and links, so the agent can finish signups, logins and email-flow tests without a human checking an inbox.
 
 ```
