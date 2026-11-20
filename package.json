@@ -1,7 +1,7 @@
 {
   "name": "openinbox-mcp",
   "version": "1.0.0",
-  "description": "MCP server for OpenInbox: give AI agents (Claude, ChatGPT, Cursor) a disposable email inbox to receive verification codes and links.",
+  "description": "MCP server for OpenInbox: give AI agents (Claude, Cursor, Codex) a disposable email inbox to receive verification codes and links.",
   "mcpName": "io.github.openinbox-io/openinbox-mcp",
   "license": "MIT",
   "type": "module",

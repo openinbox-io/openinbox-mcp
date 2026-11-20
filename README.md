@@ -5,7 +5,7 @@
 
 [![OpenInbox – Email for AI Agents MCP server – quality and maintenance score on Glama](https://glama.ai/mcp/servers/openinbox-io/openinbox-mcp/badges/card.svg)](https://glama.ai/mcp/servers/openinbox-io/openinbox-mcp)
 
-**Give your AI agent its own email inbox.** This [Model Context Protocol](https://modelcontextprotocol.io) server lets Claude, ChatGPT, Cursor and other MCP clients create real, disposable email addresses with [OpenInbox](https://openinbox.io), wait for incoming mail, and pull out verification codes and links, so the agent can finish signups, logins and email-flow tests without a human checking an inbox.
+**Give your AI agent its own email inbox.** This [Model Context Protocol](https://modelcontextprotocol.io) server lets Claude, Cursor, Codex, VS Code and other MCP clients create real, disposable email addresses with [OpenInbox](https://openinbox.io), wait for incoming mail, and pull out verification codes and links, so the agent can finish signups, logins and email-flow tests without a human checking an inbox.
 
 ```
 You:    Sign up for the Acme newsletter and confirm the subscription.
@@ -73,6 +73,17 @@ Add to `.vscode/mcp.json`:
     }
   }
 }
+```
+
+### OpenAI Codex
+
+Add to `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.openinbox]
+command = "npx"
+args = ["-y", "openinbox-mcp"]
+env = { OPENINBOX_API_KEY = "tmp_your_key" }
 ```
 
 Any other MCP client that can run a stdio server works the same way: command `npx`, args `-y openinbox-mcp`, env `OPENINBOX_API_KEY`.
