@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.openinbox-io/openinbox-mcp",
+  "title": "OpenInbox",
+  "description": "Disposable email inboxes for AI agents: receive verification codes and links to finish signups.",
+  "websiteUrl": "https://openinbox.io/ai-agents",
+  "repository": {
+    "url": "https://github.com/openinbox-io/openinbox-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "openinbox-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "OPENINBOX_API_KEY",
+          "description": "Your OpenInbox API key (Settings → API at openinbox.io; Pro, Business or 7-Day Pass plan)",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "OPENINBOX_API_URL",
+          "description": "Override the API base URL (default https://api.openinbox.io/api/v1)",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
